@@ -7,14 +7,9 @@ library(RSQLite)
 
 # table paths
 # Windows
-# invoice= read_xlsx("C:\\Users\\Alicia Lozoya\\Desktop\\Conciliaciones\\ARTES_Revisión Invoice.xlsx")
-# po=  read_xlsx("C:\\Users\\Alicia Lozoya\\Desktop\\Conciliaciones\\ARTES_Revisión PO.xlsx")
-# report=  read_xlsx("C:\\Users\\Alicia Lozoya\\Desktop\\Conciliaciones\\ConciliationReport.xlsx")
-
-# MAC
-invoice= read_xlsx("C:/Users/Andres/Desktop/Conciliaciones/ARTES_Revisión Invoice.xlsx")
-po=  read_xlsx("C:/Users/Andres/Desktop/Conciliaciones/ARTES_Revisión PO.xlsx")
-report=  read_xlsx("C:/Users/Andres/Desktop/Conciliaciones/ConciliationReport.xlsx")
+invoice= read_xlsx("Invoice.xlsx")
+po=  read_xlsx("PO.xlsx")
+report=  read_xlsx("Report.xlsx")
 
 # Invoice
 
@@ -48,9 +43,8 @@ po_results = sqldf("SELECT p.`Código de cuenta`, p.PO, r.`Rec. Reference`, p.`R
 
 
 # Path
-#my_path <- "C:\\Users\\Alicia Lozoya\\Desktop\\Conciliaciones\\" 
+my_path <- "C:\\Users\\" 
 
-my_path <- "C:/Users/Andres/Desktop/Conciliaciones/"
 
 # Name of each sheet
 data_names <- c("invoice_results", "po_results") 
